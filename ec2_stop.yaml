@@ -1,0 +1,15 @@
+---
+- name: Shutdown Ubuntu instances only using Ansible conditionals
+  hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Display OS info for all hosts
+      debug:
+        msg: "{{ inventory_hostname }} is running {{ ansible_facts['distribution'] }}"
+
+    - name: Shutdown Ubuntu instances only
+      ansible.builtin.command: /sbin/shutdown -h now
+      when: ansible_facts['distribution'] == "Ubuntu"
+      ignore_errors: true

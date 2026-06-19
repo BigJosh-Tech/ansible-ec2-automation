@@ -1,0 +1,3 @@
+vault.pass
+*.pem
+group_vars/all.yml
