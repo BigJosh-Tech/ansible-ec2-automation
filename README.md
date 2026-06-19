@@ -41,6 +41,7 @@ What This Project Does
 - ansible-vault create group_vars/all.yml
 
 4. Run the playbooks in order
+
 # Create instances
 ansible-playbook ec2_create.yaml
 
@@ -53,7 +54,7 @@ ansible all -m ping
 # Shutdown Ubuntu instances only
 ansible-playbook ec2_stop.yaml
 
-Key Concepts Demonstrated
+# Key Concepts Demonstrated
 
 - Ansible Loops — provision multiple EC2 instances in a single task
 - Ansible Vault — encrypt AWS credentials, never hardcode secrets
@@ -61,7 +62,7 @@ Key Concepts Demonstrated
 - gather_facts + when — conditionally target Ubuntu instances only
 - authorized_key module — passwordless SSH across all nodes
 
-Security Notes
+# Security Notes
 
 - Never commit vault.pass to Git — add it to .gitignore
 - Never commit your .pem file to Git
@@ -78,12 +79,12 @@ Read the full step by step guide on Medium 👉 https://medium.com/@onijoshua044
 # Author
 Joshua
 
-- LinkedIn: linkedin.com/in/joshua-oni-oluwafemi
+- LinkedIn: https://www.linkedin.com/in/joshua-oni-oluwafemi/
 - GitHub: https://github.com/BigJosh-Tech
 
 Then push to GitHub:
 - git init
 - git add .
 - git commit -m "Initial commit - Ansible EC2 automation project"
-- git remote add origin https://github.com/yourusername/ansible-ec2-automation.git
+- git remote add origin https://github.com/BigJosh-Tech/ansible-ec2-automation.git
 - git push -u origin main
