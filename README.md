@@ -76,8 +76,7 @@ ansible-playbook ec2_stop.yaml
 # Full Walkthrough
 Read the full step by step guide on Medium 👉 https://medium.com/@onijoshua044/automating-ec2-instance-management-with-ansible-a-complete-walkthrough-a616b9bbae52
 
-# Author
-Joshua
+# Author - Joshua
 
 - LinkedIn: https://www.linkedin.com/in/joshua-oni-oluwafemi/
 - GitHub: https://github.com/BigJosh-Tech
