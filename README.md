@@ -1,45 +1,44 @@
-Ansible EC2 Automation Project
+# Ansible EC2 Automation Project
 End-to-end infrastructure automation using Ansible on AWS — covering EC2 provisioning, passwordless SSH authentication, and conditional instance management.
 
-Project Structure
-ansible-project/
-├── ansible.cfg
-├── inventory.ini
-├── vault.pass
-├── group_vars/
-│   └── all.yml
-├── ec2_create.yaml
-├── ec2_passwordless.yaml
-└── ec2_stop.yaml
+# Project Structure
+- ansible-project/
+- ├── ansible.cfg
+- ├── inventory.ini
+- ├── vault.pass
+- ├── group_vars/
+- │   └── all.yml
+- ├── ec2_create.yaml
+- ├── ec2_passwordless.yaml
+- └── ec2_stop.yaml
 
 What This Project Does
 - ec2_create.yaml - Creates 3 EC2 instances using Ansible loops
 - ec2_passwordless.yaml - Sets up passwordless SSH on all instances
 - ec2_stop.yaml -   Shuts down Ubuntu instances only using conditionals
 
-Prerequisites
+# Prerequisites
 
-WSL (Ubuntu) or any Linux machine
-AWS account with IAM credentials
-Ansible, boto3, botocore installed
-amazon.aws collection installed
-An existing AWS key pair (.pem file)
+- WSL (Ubuntu) or any Linux machine
+- AWS account with IAM credentials
+- Ansible, boto3, botocore installed
+- amazon.aws collection installed
+- An existing AWS key pair (.pem file)
 
-Quick Start
+# Quick Start
 
-1. Clone the Repository
-git clone https://github.com/yourusername/ansible-ec2-automation.git
-cd ansible-ec2-automation
+1. Clone the Repository - git clone https://github.com/BigJosh-Tech/ansible-ec2-automation.git
+- cd ansible-ec2-automation
 
-2. Install dependencies
-sudo apt update && sudo apt install ansible python3-pip -y
-pip3 install boto3 botocore --break-system-packages
-ansible-galaxy collection install amazon.aws
+2. Install dependencies 
+- sudo apt update && sudo apt install ansible python3-pip -y
+- pip3 install boto3 botocore --break-system-packages
+- ansible-galaxy collection install amazon.aws
 
 3. Set up vault credentials
-echo "yourpassword" > vault.pass
-chmod 600 vault.pass
-ansible-vault create group_vars/all.yml
+- echo "yourpassword" > vault.pass
+- chmod 600 vault.pass
+- ansible-vault create group_vars/all.yml
 
 4. Run the playbooks in order
 # Create instances
@@ -68,23 +67,23 @@ Security Notes
 - Never commit your .pem file to Git
 - Always encrypt sensitive credentials using Ansible Vault
 
-Add this to your .gitignore:
-vault.pass
-*.pem
-group_vars/all.yml
+# Add this to your .gitignore:
+- vault.pass
+- *.pem
+- group_vars/all.yml
 
-Full Walkthrough
-Read the full step by step guide on Medium 👉 [https://medium.com/@onijoshua044]
+# Full Walkthrough
+Read the full step by step guide on Medium 👉 https://medium.com/@onijoshua044/automating-ec2-instance-management-with-ansible-a-complete-walkthrough-a616b9bbae52
 
-Author
+# Author
 Joshua
 
-LinkedIn: [linkedin.com/in/joshua-oni-oluwafemi]
-GitHub: [https://github.com/BigJosh-Tech]
+- LinkedIn: linkedin.com/in/joshua-oni-oluwafemi
+- GitHub: https://github.com/BigJosh-Tech
 
 Then push to GitHub:
-git init
-git add .
-git commit -m "Initial commit - Ansible EC2 automation project"
-git remote add origin https://github.com/yourusername/ansible-ec2-automation.git
-git push -u origin main
+- git init
+- git add .
+- git commit -m "Initial commit - Ansible EC2 automation project"
+- git remote add origin https://github.com/yourusername/ansible-ec2-automation.git
+- git push -u origin main
